@@ -6,13 +6,14 @@ from gpt_ground.settings import env, MEDIA_ROOT, MEDIA_URL, STATIC_ROOT, STATIC_
 
 api_url_patterns = (
     [
-
         path('accounts/v1/', include('accounts.api.v1.urls')),
     ], 'api'
 )
 
 urlpatterns = [
-    path('api/', include(api_url_patterns)),
+    # path('api/', include(api_url_patterns)),
+    path('', include('accounts.urls')),
+
     path('admin/', admin.site.urls),
 ]
 
